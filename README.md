@@ -8,6 +8,6 @@ In the first place, you must be run `npm install` or `yarn` for install the depe
 
 Run `npm start` or `node serve.js` for init the server. The url is `http://localhost:3000/`.
 
-## Test with mocha
+## Test with mocha and chai
 
 Run `npm test` to start unit test.
