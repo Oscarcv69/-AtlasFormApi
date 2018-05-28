@@ -31,15 +31,15 @@ describe("Users", () => {
   describe("/POST Users", () => {
     it("it should not POST a  email field", done => {
       let user = {
-        name: "oscar",
-        document: "09050293A",
-        subscribe: "si",
-        captation: "web",
-        address: "estepona",
+        name: "Fake Fake",
+        document: "12345678A",
+        subscribe: "Si",
+        captation: "Web",
+        address: "Fake street",
         zipcode: "28987",
-        region: "malaga",
-        city: "malaga",
-        country: "CACCC",
+        region: "Andalucia",
+        city: "Malaga",
+        country: "Espana",
         observations: "ninguna"
       };
       chai
@@ -58,16 +58,16 @@ describe("Users", () => {
   });
   it("it should POST a book ", done => {
     let user = {
-      name: "oscar",
+      name: "Fake Fake",
       email: "fake@fake.com",
-      document: "09017123A",
-      subscribe: "si",
-      captation: "web",
-      address: "estepona",
+      document: "12345678A",
+      subscribe: "Si",
+      captation: "Web",
+      address: "Fake street",
       zipcode: "28987",
-      region: "malaga",
-      city: "malaga",
-      country: "CACCC",
+      region: "Andalucia",
+      city: "Malaga",
+      country: "Espana",
       observations: "ninguna"
     };
     chai
@@ -83,16 +83,16 @@ describe("Users", () => {
   describe("/GET/:email user", () => {
     it("it should GET a user by the given id", done => {
       let user = new User({
-        name: "oscar",
-        email: "fakee@fake.com",
-        document: "09057133A",
-        subscribe: "si",
-        captation: "web",
-        address: "estepona",
+        name: "Fake Fake",
+        email: "fake@fake.com",
+        document: "12345678A",
+        subscribe: "Si",
+        captation: "Web",
+        address: "Fake street",
         zipcode: "28987",
-        region: "malaga",
-        city: "malaga",
-        country: "CACCC",
+        region: "Andalucia",
+        city: "Malaga",
+        country: "Espana",
         observations: "ninguna"
       });
       user.save((err, user) => {

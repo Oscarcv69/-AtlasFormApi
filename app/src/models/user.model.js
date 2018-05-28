@@ -6,11 +6,11 @@ const userSchema = mongoose.Schema({
   document: { type: String, unique: true, required: true },
   subscribe: {
     type: String,
-    enum: ["si", "no"]
+    enum: ["Si", "No"]
   },
   captation: {
     type: String,
-    enum: ["telf", "web", "pres"],
+    enum: ["Telefonica", "Web", "Presencial"],
     required: true
   },
   address: String,
