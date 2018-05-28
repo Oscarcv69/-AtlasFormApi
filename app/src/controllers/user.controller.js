@@ -40,12 +40,28 @@ exports.findAll = (req, res) => {
     });
 };
 
-exports.findOne = (req, res) => {
-  User.find({ email: req.params.userId })
+exports.findByEmail = (req, res) => {
+  User.find({ email: req.params.userEmail })
     .then(user => {
       if (!user) {
         return res.status(404).send({
-          message: "User not found with " + req.params.userId
+          message: "User not found with " + req.params.userEmail
+        });
+      }
+      res.send(user);
+    })
+    .catch(err => {
+      if (err.kind === "ObjectId") {
+        return res.status(404).send({ message: "User not found" });
+      }
+    });
+};
+exports.findByDocument = (req, res) => {
+  User.find({ document: req.params.userDoc })
+    .then(user => {
+      if (!user) {
+        return res.status(404).send({
+          message: "User not found with " + req.params.userDoc
         });
       }
       res.send(user);
